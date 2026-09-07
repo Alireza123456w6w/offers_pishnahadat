@@ -13,10 +13,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;600&display=swap" />
-    <script type="module" crossorigin src="../assets/index-D4iU1Kaq.js"></script>
-    <link rel="stylesheet" crossorigin href="../assets/styles-DqgMfdzx.css">
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #05060d;
+        color: #e8ecff;
+        font-family: Vazirmatn, system-ui, sans-serif;
+      }
+      #boot {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        gap: 14px;
+        background: radial-gradient(ellipse at top, #101634 0%, #05060d 70%);
+        z-index: 50;
+        transition: opacity 0.4s ease;
+      }
+      #boot.gone {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #boot i {
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        border: 2px solid rgba(120, 140, 255, 0.25);
+        border-top-color: #7b8cff;
+        animation: spin 0.9s linear infinite;
+      }
+      #boot span {
+        font-size: 13px;
+        opacity: 0.75;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-DaLfGHcH.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/styles-CBN9iHCR.css">
   </head>
   <body>
+    <div id="boot"><i></i><span>در حال بارگذاری…</span></div>
     <div id="root"></div>
   </body>
 </html>
